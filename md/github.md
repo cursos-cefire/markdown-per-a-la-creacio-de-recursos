@@ -191,7 +191,7 @@ Esta web està publicada a [https://cursos-cefire.github.io/markdown-per-a-la-cr
     Els arxius es poden modificar tant per web com en local, però recomanem fer-ho en local, ja que necessitem fer un build per a publicar els canvis. 
 
 !!!warning "Construcció de la web"
-    Recordeu executar un build abans de portar els canvis a publicar, d'altra forma, sols es publicaran els canvis als arxius font, però no a la web.
+    Recordeu executar un build abans de portar els canvis a publicar, d'altra forma, sols es publicaran els canvis als arxius font, però no a la web publicada. El procés de publicació sol tardar un parell de minuts en veures reflexat després de sincronitzar amb el remot.
 
 !!!note "Ús de Source Control"
     Si esteu acostumats a treballar amb git i github, podeu executar els comandaments a través de git amb clone, add, commit i push. 
