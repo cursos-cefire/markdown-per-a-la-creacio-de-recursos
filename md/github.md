@@ -145,26 +145,25 @@ Si s'heu fixat a l'explorador del VSCode apareix la lletra U (*untracked*) a l'e
 Anem, en la pestanya de l'equerra, a *Source Control*, escrivim un missatge indicant quins canvis volem confirmar i li donem al botó de commit. En este cas, nosaltres hem posat "primera versió de la web amb mkdocs".
 
 
-![Commit](img/github/commit2.png)
+![Confirmem els canvis](img/github/commit2.png)
 
-![Confirmem els canvis](img/github/commit.png){width=12cm}
+Si ens ix una finestra responem que volem confirmar els canvis.
 
-Per a evitar que ens fallen els commits, anem a configurar el nostre nom i el nostre correu a la configuració de Git, amb les següents dues ordres, introduint les vostres dades corresponents:
+Per a evitar que ens fallen els commits, anem a configurar el nostre nom i el nostre correu a la configuració de Git, amb les següents dues ordres, introduint les vostres dades corresponents (el correu i el nom d'usuari són els utilitzats durant el registre de github):
 
-```bash
+```sh
 git config --global user.email "El vostre correu"
-git config --global user.name "El vostre nom"
+git config --global user.name "El vostre nom d'usuari"
 ```
-
-Per últim ens falta pujar els arxius a Github.
 
 ## Pugem els canvis a Github
 
-Sols ens falta pujar els canvis al repositori en Github per a que la web es publique. Ho fem amb un *Push*[^4].
+Una vegada confirmats els canvis al repositori, sols ens falta sincronitzar el remot amb els canvis del local.
 
-[^4]: Per als que utilitzeu la consola, seria `git push`.
+Per fer-ho, simplement li donem al botó de sincronitzar, situat on abans estava el de `commit` a la pestanya del control de versions.
 
-![Pujar els canvis a Github](img/github/push.png){width=12cm}
+![]()
+
 
 El VSCode ens avisarà de que l'extensió Github (ja ve integrada sense necessitat d'instal·lar-la) vol iniciar sessió a Github per a guardar els canvis que hem fet en local. Li donem a permetre i s'iniciarà l'intercanvi del *token* en diversos passos entre el navegador i el VSCode. A partir d'este moment VSCode podrà accedir de forma segura al repositori remot. Si no teniu la sessió iniciada a Github, se us demanarà l'usuari i la contrasenya durant el procés. 
 
