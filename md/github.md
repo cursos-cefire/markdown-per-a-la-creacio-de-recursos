@@ -162,18 +162,20 @@ Una vegada confirmats els canvis al repositori, sols ens falta sincronitzar el r
 
 Per fer-ho, simplement li donem al botó de sincronitzar, situat on abans estava el de `commit` a la pestanya del control de versions.
 
-![]()
+![Sincronitzem el remot](img/github/push2.png)
 
 
 El VSCode ens avisarà de que l'extensió Github (ja ve integrada sense necessitat d'instal·lar-la) vol iniciar sessió a Github per a guardar els canvis que hem fet en local. Li donem a permetre i s'iniciarà l'intercanvi del *token* en diversos passos entre el navegador i el VSCode. A partir d'este moment VSCode podrà accedir de forma segura al repositori remot. Si no teniu la sessió iniciada a Github, se us demanarà l'usuari i la contrasenya durant el procés. 
 
-![Registrar-se en Github](img/github/allow.png){width=8cm}
+![Registrar-se en Github](img/github/allow.png)
 
 Si tot ha anat bé, veureu en l'apartat de comptes d'usuari (icona de baix a l'esquerra) de VSCode que esteu amb la sessió de Github iniciada i el repositori local s'haurà pujat a Github per a la seua publicació.
 
-![Comptes d'usuari i sessions](img/github/account.png){width=8cm}
+![Comptes d'usuari i sessions](img/github/account.png)
 
-Podeu comprovar que els arxius que hem creat en local, estan al nostre respositori web de Github. Aneu a *Settings* i en l'apartat Pages vos indicarà si la pàgina ja està publicada i la seua adreça, que serà **https://nom_organització.github.io**. Comproveu que ja podeu navegar per ella.
+Podeu comprovar que els arxius que hem creat en local, estan al nostre respositori web de Github simplement accedint al repositori i observant si els arxius estan.
+
+Aneu a *Settings* i en l'apartat Pages vos indicarà si la pàgina ja està publicada i la seua adreça, que serà **https://nom_organització.github.io**. Comproveu que ja podeu navegar per ella.
 
 :::caution
 Els arxius es poden modificar tant per web com en local, però recomanem fer-ho sempre al mateix lloc si no domineu bé el programa de control de versions *git*, ja que poden aparéixer conflictes que s'han de resoldre al modificar en llocs diferents. Si voleu modificar als dos llocs, feu sempre un *Pull* (portar canvia del remot al local) al repositori local abans de fer les modificacions en local i un *Push* (penjar canvis del local al remot) a l'acabar.
