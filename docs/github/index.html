@@ -125,6 +125,11 @@
             </li>
               </ul>
             </li>
+            
+            <li class="nav-item" data-level="1"><a href="#configurem-github-per-a-que-ens-publique-la-web" class="nav-link">Configurem github per a que ens publique la web</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -220,7 +225,7 @@ site_dir: 'docs'
 <p>Si s'heu fixat a l'explorador del VSCode apareix la lletra U (<em>untracked</em>) a l'esquerra de cada arxiu. Això indica que eixe arxiu no està inclòs al repositori. Altres apareixeran amb la M si han sigut modificats després d'haver-los afegit (<em>modified</em>). </p>
 <p>Anem, en la pestanya de l'equerra, a <em>Source Control</em>, escrivim un missatge indicant quins canvis volem confirmar i li donem al botó de commit. En este cas, nosaltres hem posat "primera versió de la web amb mkdocs".</p>
 <p><img alt="Confirmem els canvis" src="../img/github/commit2.png" /></p>
-<p>Si ens ix una finestra responem que volem confirmar els canvis.</p>
+<p>Ens ixirà una finestra preguntant si volem afegir i confirmar els canvis directament. Responem de forma afirmativa.</p>
 <p>Per a evitar que ens fallen els commits, anem a configurar el nostre nom i el nostre correu a la configuració de Git, amb les següents dues ordres, introduint les vostres dades corresponents (el correu i el nom d'usuari són els utilitzats durant el registre de github):</p>
 <pre><code class="language-sh">git config --global user.email &quot;El vostre correu&quot;
 git config --global user.name &quot;El vostre nom d'usuari&quot;
@@ -231,13 +236,27 @@ git config --global user.name &quot;El vostre nom d'usuari&quot;
 <p><img alt="Sincronitzem el remot" src="../img/github/push2.png" /></p>
 <p>El VSCode ens avisarà de que l'extensió Github (ja ve integrada sense necessitat d'instal·lar-la) vol iniciar sessió a Github per a guardar els canvis que hem fet en local. Li donem a permetre i s'iniciarà l'intercanvi del <em>token</em> en diversos passos entre el navegador i el VSCode. A partir d'este moment VSCode podrà accedir de forma segura al repositori remot. Si no teniu la sessió iniciada a Github, se us demanarà l'usuari i la contrasenya durant el procés. </p>
 <p><img alt="Registrar-se en Github" src="../img/github/allow.png" /></p>
-<p>Si tot ha anat bé, veureu en l'apartat de comptes d'usuari (icona de baix a l'esquerra) de VSCode que esteu amb la sessió de Github iniciada i el repositori local s'haurà pujat a Github per a la seua publicació.</p>
+<p>Si tot ha anat bé, veureu en l'apartat de comptes d'usuari (icona de baix a l'esquerra) de VSCode que esteu amb la sessió de Github iniciada i el repositori local se n'haurà pujat a Github per a la seua publicació.</p>
 <p><img alt="Comptes d'usuari i sessions" src="../img/github/account.png" /></p>
-<p>Podeu comprovar que els arxius que hem creat en local, estan al nostre respositori web de Github. Aneu a <em>Settings</em> i en l'apartat Pages vos indicarà si la pàgina ja està publicada i la seua adreça, que serà <strong>https://nom_organització.github.io</strong>. Comproveu que ja podeu navegar per ella.</p>
-<p>:::caution
-Els arxius es poden modificar tant per web com en local, però recomanem fer-ho sempre al mateix lloc si no domineu bé el programa de control de versions <em>git</em>, ja que poden aparéixer conflictes que s'han de resoldre al modificar en llocs diferents. Si voleu modificar als dos llocs, feu sempre un <em>Pull</em> (portar canvia del remot al local) al repositori local abans de fer les modificacions en local i un <em>Push</em> (penjar canvis del local al remot) a l'acabar.
-:::</p>
-<p>\newpage</p></div>
+<p>Podeu comprovar que els arxius que hem creat en local, estan al nostre respositori web de Github simplement accedint al repositori i observant si els arxius estan.</p>
+<p><img alt="remot sincronitzat" src="../img/github/sincronitzat.png" /></p>
+<h1 id="configurem-github-per-a-que-ens-publique-la-web">Configurem github per a que ens publique la web</h1>
+<p>Per últim, sols ens falta configurar github per a que ens publique el nostre <em>build</em>.</p>
+<p>Aneu a <em>Settings</em> i en l'apartat <strong>Pages</strong> indiqueu que voleu publicar de la rama <em>main</em>, la carpeta <em>docs</em>.</p>
+<p>En breu vos indicarà si la pàgina ja està publicada o si per contra hi ha hagut algun error. Si tot ha anat bé us indicarà l'adreça on s'ha publicat, que serà <strong>https://nom_usuari.github.io/nom_repositori</strong>. Comproveu que ja podeu navegar per ella i es veu tal qual la veieu al servidor local.</p>
+<p>Esta web està publicada a <a href="https://cursos-cefire.github.io/markdown-per-a-la-creacio-de-recursos/">https://cursos-cefire.github.io/markdown-per-a-la-creacio-de-recursos/</a> i el seu repositori corresponent amb tots els arxius font, arxiu de configuració i llicència el trobareu a <a href="https://github.com/cursos-cefire/markdown-per-a-la-creacio-de-recursos/">https://github.com/cursos-cefire/markdown-per-a-la-creacio-de-recursos/</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Treball en local i en remot</p>
+<p>Els arxius es poden modificar tant per web com en local, però recomanem fer-ho en local, ja que necessitem fer un build per a publicar els canvis. </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Construcció de la web</p>
+<p>Recordeu executar un build abans de portar els canvis a publicar, d'altra forma, sols es publicaran els canvis als arxius font, però no a la web.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Ús de Source Control</p>
+<p>Si esteu acostumats a treballar amb git i github, podeu executar els comandaments a través de git amb clone, add, commit i push. </p>
+</div></div>
             </div>
         </div>
 

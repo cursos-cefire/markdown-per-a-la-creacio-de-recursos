@@ -147,7 +147,7 @@ Anem, en la pestanya de l'equerra, a *Source Control*, escrivim un missatge indi
 
 ![Confirmem els canvis](img/github/commit2.png)
 
-Si ens ix una finestra responem que volem confirmar els canvis.
+Ens ixirà una finestra preguntant si volem afegir i confirmar els canvis directament. Responem de forma afirmativa.
 
 Per a evitar que ens fallen els commits, anem a configurar el nostre nom i el nostre correu a la configuració de Git, amb les següents dues ordres, introduint les vostres dades corresponents (el correu i el nom d'usuari són els utilitzats durant el registre de github):
 
@@ -169,17 +169,29 @@ El VSCode ens avisarà de que l'extensió Github (ja ve integrada sense necessit
 
 ![Registrar-se en Github](img/github/allow.png)
 
-Si tot ha anat bé, veureu en l'apartat de comptes d'usuari (icona de baix a l'esquerra) de VSCode que esteu amb la sessió de Github iniciada i el repositori local s'haurà pujat a Github per a la seua publicació.
+Si tot ha anat bé, veureu en l'apartat de comptes d'usuari (icona de baix a l'esquerra) de VSCode que esteu amb la sessió de Github iniciada i el repositori local se n'haurà pujat a Github per a la seua publicació.
 
 ![Comptes d'usuari i sessions](img/github/account.png)
 
 Podeu comprovar que els arxius que hem creat en local, estan al nostre respositori web de Github simplement accedint al repositori i observant si els arxius estan.
 
-Aneu a *Settings* i en l'apartat Pages vos indicarà si la pàgina ja està publicada i la seua adreça, que serà **https://nom_organització.github.io**. Comproveu que ja podeu navegar per ella.
+![remot sincronitzat](img/github/sincronitzat.png)
 
-:::caution
-Els arxius es poden modificar tant per web com en local, però recomanem fer-ho sempre al mateix lloc si no domineu bé el programa de control de versions *git*, ja que poden aparéixer conflictes que s'han de resoldre al modificar en llocs diferents. Si voleu modificar als dos llocs, feu sempre un *Pull* (portar canvia del remot al local) al repositori local abans de fer les modificacions en local i un *Push* (penjar canvis del local al remot) a l'acabar.
-:::
+# Configurem github per a que ens publique la web
 
-\newpage
+Per últim, sols ens falta configurar github per a que ens publique el nostre *build*.
 
+Aneu a *Settings* i en l'apartat **Pages** indiqueu que voleu publicar de la rama *main*, la carpeta *docs*.
+
+En breu vos indicarà si la pàgina ja està publicada o si per contra hi ha hagut algun error. Si tot ha anat bé us indicarà l'adreça on s'ha publicat, que serà **https://nom_usuari.github.io/nom_repositori**. Comproveu que ja podeu navegar per ella i es veu tal qual la veieu al servidor local.
+
+Esta web està publicada a [https://cursos-cefire.github.io/markdown-per-a-la-creacio-de-recursos/](https://cursos-cefire.github.io/markdown-per-a-la-creacio-de-recursos/) i el seu repositori corresponent amb tots els arxius font, arxiu de configuració i llicència el trobareu a [https://github.com/cursos-cefire/markdown-per-a-la-creacio-de-recursos/](https://github.com/cursos-cefire/markdown-per-a-la-creacio-de-recursos/).
+
+!!!warning "Treball en local i en remot"
+    Els arxius es poden modificar tant per web com en local, però recomanem fer-ho en local, ja que necessitem fer un build per a publicar els canvis. 
+
+!!!warning "Construcció de la web"
+    Recordeu executar un build abans de portar els canvis a publicar, d'altra forma, sols es publicaran els canvis als arxius font, però no a la web.
+
+!!!note "Ús de Source Control"
+    Si esteu acostumats a treballar amb git i github, podeu executar els comandaments a través de git amb clone, add, commit i push. 
