@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Web estàtica amb mkdocs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Web estàtica amb mkdocs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem active">
+                                <a href="." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="configuracio/" class="nav-link">Configuracio</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="aules/" class="nav-link">Allotgem la web a Aules</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="github/" class="nav-link">Allotgem la web a github</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="aules%20vs%20github/" class="nav-link">Aules o github?</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="configuracio/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#web-estatica-amb-mkdocs" class="nav-link">Web estàtica amb mkdocs</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#que-es-mkdocs" class="nav-link">Què és mkdocs?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#installacio-dmkdocs" class="nav-link">Instal·lació d'mkdocs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#creacio-dun-nou-projecte" class="nav-link">Creació d'un nou projecte</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#estructura-del-projecte" class="nav-link">Estructura del projecte</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#servim-la-web-en-local" class="nav-link">Servim la web en local</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="web-estatica-amb-mkdocs">Web estàtica amb mkdocs</h1>
+<p>En aquest apartat ens centrarem a construir una pàgina web estàtica utilitzant <strong>mkdocs</strong>. De nou, l'aspecte de la web vindrà determinat per plantilles, encara que en aquest cas els anomenarem temes. Continuem, per tant, amb la idea principal del curs, centrar-nos en el contingut i no tant en l'aspecte, que simplement el configurarem una vegada.</p>
+<p>Una vegada construït el nostre lloc, aprendrem a allotjar-lo a Aules i en un apartat posterior l'allotjarem en un repositori de github, per tal que estiga disponible de forma pública a través d'internet.</p>
+<p>Abans de començar amb el desenvolupament de l'apartat, explicarem breument què és mkdocs.</p>
+<h2 id="que-es-mkdocs">Què és <a href="https://www.mkdocs.org/">mkdocs</a>?</h2>
+<div class="admonition note">
+<p class="admonition-title">mkdocs</p>
+<p>Mkdocs és un generador de llocs web estàtics, pren com a entrada text escrit en markdown i utilitza dissenys predefinits per crear un lloc web estàtic. Podeu modificar l'aspecte del lloc, els enllaços, les dades que es mostren a la pàgina i moltes coses més.</p>
+</div>
+<h2 id="installacio-dmkdocs">Instal·lació d'mkdocs</h2>
+<div class="admonition important">
+<p class="admonition-title">VSCode</p>
+<p>Per a realitzar estos passos, recomanem utilitzar VSCode, ja que ens permet tindre un editor d'arxius i una terminal oberta al mateix programa.</p>
+</div>
+<p>Per a instal·lar mkdocs al nostre ordinador, executarem la següent ordre des de consola (konsole per a Lliurex, PowerShell per a Windows, ...):</p>
+<pre><code class="language-sh">pip install mkdocs
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Pip</p>
+<p>Ja haurieu de tindre pip instal·lat de unitats anteriors, en cas contrari has d'instal·lar python3 i durant la seua instal·lació marcar l'opció d'instal·lar <em>pip</em> i agregar-lo al PATH. Pots descarregar python3 del següent enllaç, <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>.</p>
+</div>
+<p>Una vegada instal·lat mkdocs, haurieu de ser capços d'executar la següent ordre a la consola:</p>
+<pre><code class="language-sh">https://www.python.org/downloads/
+</code></pre>
+<p>Obtenint una resposta semblant a la següent:</p>
+<pre><code class="language-bash">mkdocs, version 1.3.1 from /home/ferran/.local/lib/python3.10/site-packages/mkdocs (Python 3.10)
+</code></pre>
+<h2 id="creacio-dun-nou-projecte">Creació d'un nou projecte</h2>
+<p>Una vegada tenim mkdocs instal·lat, necessitem crear un nou projecte per a construir la nostra web. Per tal de començar un nou projecte, executem:</p>
+<pre><code class="language-sh">mkdocs new &quot;nom del projecte&quot;
+</code></pre>
+<h2 id="estructura-del-projecte">Estructura del projecte</h2>
+<p>Al crear un nou projecte, amb mkdocs, observareu que s'ha creat una estructura com la següent:</p>
+<pre><code>.
+├── docs
+│   └── index.md
+└── mkdocs.yml
+</code></pre>
+<ul>
+<li>L'arxiu <strong>mkdocs.yml</strong> és l'arxiu de configuració de tot el projecte.</li>
+<li>La carpeta <strong>docs</strong> contindrà els nostres documents en format markdown.</li>
+<li>L'arxiu <strong>index.md</strong> és un arxiu de mostra que es mostrarà en format web al accedir a l'arrel del lloc web.</li>
+</ul>
+<p>Si et fixes, per una banda tindrem el contingut en markdown i per altra la configuració de com renderitzar aquest contingut.</p>
+<div class="admonition warning">
+<p class="admonition-title">Carpeta docs</p>
+<p>Encara que per defecte els arxius en format markdown estan a la carpeta docs, anem a canviar esta configuració en apartats posteriors.</p>
+</div>
+<h2 id="servim-la-web-en-local">Servim la web en local</h2>
+<p>Per a servir una web, necessitaríem un servidor web que ens allotjara la nostra web per tal de poder accedir de forma local o remota a través del navegador. mkdocs ens facilita aquesta tasca creant un servidor al nostre ordinador per tal que pugam previsualitzar els canvis abans de servir-ho en un servidor públic (accessible a través d'internet) o construir la nostra web per a publicar-la.</p>
+<p>Per a servir la nostra web, simplement hau d'executar el següent comandament:</p>
+<pre><code class="language-sh">$ mkdocs serve
+INFO     -  Building documentation...
+INFO     -  Cleaning site directory
+INFO     -  Documentation built in 0.06 seconds
+INFO     -  [12:49:32] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO     -  [12:49:32] Serving on http://127.0.0.1:8000/
+</code></pre>
+<p>Ara accedirem a l'URL <code>http://127.0.0.1:8000/</code> i podrem veure la pàgina web per defecte:</p>
+<p><img alt="index_per_defecte" src="img/index_per_defecte.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Index per defecte</p>
+<p>Obriu al VSCode l'arxiu index.md i fixeu-vos com es correspon amb el que esteu veient a la web local. És a dir, s'està renderitzant el markdown en format web.</p>
+<p>Ara podeu introduir els canvis que desitgeu al vostre contingut, i en guardar, els canvis es reflectiran automàticament al navegador, sempre i quan, l'ordre mkdocs serve continue en execució. <strong>La autorecàrrega es produeix sempre que modifiquem l'arxiu de configuració, el contingut dels arxius markdown o els arxius del tema.</strong></p>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.3.1
+Build Date UTC : 2023-02-15 19:47:00.805387+00:00
+-->

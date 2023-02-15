@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Allotgem la web a github - Web estàtica amb mkdocs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Web estàtica amb mkdocs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../configuracio/" class="nav-link">Configuracio</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../aules/" class="nav-link">Allotgem la web a Aules</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Allotgem la web a github</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../aules%20vs%20github/" class="nav-link">Aules o github?</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../aules/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../aules%20vs%20github/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#allotgem-la-nostra-web-al-servidor-de-github" class="nav-link">Allotgem la nostra web al servidor de github</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#que-es-un-sistema-de-control-de-versions" class="nav-link">Què és un sistema de control de versions?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#aleshores-que-es-github" class="nav-link">Aleshores, què és Github?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#configuracio-de-github" class="nav-link">Configuració de Github</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#registre-dusuari" class="nav-link">Registre d'usuari</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#creacio-dun-repositori" class="nav-link">Creació d'un repositori</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#clonacio-del-repositori" class="nav-link">Clonació del repositori</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#configurem-el-projecte-dmkdocs-per-a-publicar-a-github" class="nav-link">Configurem el projecte d'mkdocs per a publicar a github</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#afegim-arxius-locals-al-repositori-remot-de-github" class="nav-link">Afegim arxius locals al repositori remot de github</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pugem-els-canvis-a-github" class="nav-link">Pugem els canvis a Github</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="allotgem-la-nostra-web-al-servidor-de-github">Allotgem la nostra web al servidor de github</h1>
+<h2 id="que-es-un-sistema-de-control-de-versions">Què és un sistema de control de versions?</h2>
+<p>Per a entendre què és Github, necessitem conéixer dos conceptes relacionats:</p>
+<ul>
+<li>Sistema de control de versions</li>
+<li>Git</li>
+</ul>
+<p>Un <em>sistema de control de versions</em> ajuda els desenvolupadors de contingut a rastrejar i gestionar els canvis que es produeixen en un projecte. És àmpliament utilitzat en el desenvolupament de <em>software</em>, però el podem aplicar a altres àmbits, com l'àmbit docent, per a gestionar els nostres apunts. </p>
+<p>Anem a veure un exemple ...</p>
+<p>Imaginem que som desenvolupadors que col·laborem en el desenvolupament de <a href="https://wordpress.com/es/">WordPress</a>. Si un dels desenvolupadors volgués treballar en una de les parts del codi de WordPress, no seria segur ni eficaç que editara directament el codi font "oficial".</p>
+<p>En lloc d'això, el control de versions permet als desenvolupadors treballar amb seguretat mitjançant <em>ramificacions</em> i <em>fusions</em>.</p>
+<p>Amb la ramificació, un desenvolupador duplica el codi font (anomenat repositori) al seu ordinador. Aleshores, el desenvolupador pot fer canvis en aquesta part del codi sense afectar la resta del projecte.</p>
+<p>Una vegada el desenvolupador ha provat i aconsegueix que la seua part del codi funcione correctament, pot incloure els seus canvis al projecte, és a dir, fusionar aquest codi amb el codi font principal per fer-lo oficial.</p>
+<p>El <em>sistema de control</em>, ens permet aleshores veure quins canvis s'han produït, revertir-los, incloure'ls, tornar a una versió anterior...</p>
+<p>Un altre exemple de control de versions el podem observar en els documents de Google Suite. Per veure les diferents versions que tenim d'un document, podem accedir fent clic a l'enllaç on indica quan s'ha guardat la <em>última</em> modificació que hem fet al document.</p>
+<p><img alt="GSuite: obrir control de versions" src="../img/github/control-version-gsuite.png" /></p>
+<p>Ens apareix una finestra on tenim les diferents versions que s'han anat guardant del document. També podem veure, en verd, què s'ha inclós al document des de les anteriors versions o què s'ha eliminat, esta vegada en verd però amb el text ratllat.</p>
+<p><img alt="GSuite: versions de document" src="../img/github/control-version-gsuite-2.png" /></p>
+<p>VSCode també incorpora control de versions als nostres arxius, de forma que podem tornar a una versió anterior en el temps. Per fer-ho, pulsem baix a la dreta <em>TIMELINE</em> o <em>LÍNIA DE TEMPS</em> segons l'idioma i veurem les versions anteriorment guardades de forma automàtica. Si fem clic sobre qualsevol de les versions, podrem veure els canvis respecte a la versió actual i escollir la que més ens interesse.</p>
+<p><img alt="timeline" src="../img/github/timeline.png" /></p>
+<h3 id="git">Git</h3>
+<p>Git és un sistema de control de versions de codi obert creat per Linus Torvalds, el creador del primer kernel de Linux, l'any 2005.</p>
+<p>Es diu que Git és un sistema de control de versions distribuït, ja que totes les versions estan disponibles a l'ordinador de cada desenvolupador, cosa que permet ramificar i fusionar molt fàcilment.</p>
+<p>Segons una enquesta de desenvolupadors de Stack Overflow, més del 87% dels desenvolupadors utilitzen Git.</p>
+<h2 id="aleshores-que-es-github">Aleshores, què és <a href="https://github.com/">Github</a>?</h2>
+<p>GitHub és una plataforma que ofereix un servei gratuït d'allotjament de repositoris Git basat en el núvol. En altres paraules, és una forma d'utilitzar repositoris Git a través de la web.</p>
+<p>La interfície de GitHub és molt intuïtiva i fàcil d'utilitzar, i elimina la necessitat d'utilitzar la línia de comandaments per a dur el control de versions. És tan fàcil d'utilitzar, que ha adquirit molta popularitat per a gestionar altres tipus de projectes, com ara escriure llibres, apunts...</p>
+<p>Els repositoris que creem a Github poden ser públics i estar disponibles per a qualsevol persona o ser privats, però en aquest cas només seran accessibles pels col·laboradors del repositori.</p>
+<div class="admonition note">
+<p class="admonition-title">Github</p>
+<p>Github va entrar en funcionament l'any 2008. </p>
+<p>L'any 2018, Microsoft el va adquirir per 7.500 milions de dòlars.</p>
+<p>En Gener del 2020, GitHub tenia més de 40 milions d'usuaris, més de 190 milions de repositoris, 28 milions dels quals són públics.</p>
+</div>
+<h1 id="configuracio-de-github">Configuració de Github</h1>
+<h2 id="registre-dusuari">Registre d'usuari</h2>
+<p>En este primer punt, crearem un repositori github per a allotjar la nostra web. </p>
+<p>El primer pas serà registrar-nos a github en cas que no ho estigam ja accedint al següent enllaç <a href="https://github.com/signup?user_email=&amp;source=form-home-signup">https://github.com/signup?user_email=&amp;source=form-home-signup</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Registre</p>
+<p>Fixeu-se que el registre es realitza a través d'un formulari completament integrat en la web amb una estètica molt cuidada</p>
+</div>
+<p><img alt="Registre de github" src="../img/github/github-register.png" /></p>
+<h2 id="creacio-dun-repositori">Creació d'un repositori</h2>
+<p>Un repositori de github és un projecte allotjat al núvol sobre el qual volem portar un control de versions a través de la web.</p>
+<div class="admonition warning">
+<p class="admonition-title">Repositori github en local</p>
+<p>Un repositori també el podem clonar al nostre disc dur per treballar de forma local, i solament enviar els canvis definitius per a la seua publicació. VSCode ens proporciona facilitats per treballar amb repositoris de github. Recomanem utilitzar esta forma de treballar.</p>
+</div>
+<p>Per a crear un repositori, iniciem sessió a <a href="https://github.com">https://github.com</a> i fem clic al botó de <code>+</code> de dalt a la dreta, després seleccionem l'opció de <code>New repository</code>. </p>
+<p><img alt="new repository" src="../img/github/github-new-repository2.png" /></p>
+<p>Assigneu un nom que identifique el repositori i el feu públic. Si voleu, també podeu afegir un arxiu <code>README</code> i una llicència.</p>
+<p><img alt="new repository" src="../img/github/github-new-repository3.png" /></p>
+<h2 id="clonacio-del-repositori">Clonació del repositori</h2>
+<p>El que anem a fer ara és portar el repositori de Github al nostre ordinador per a poder agregar contingut, que una vegada provat, tornarem a pujar a Github per a que es publique la nostra web, igual que hem fet a Aules. </p>
+<p>Per a portar el codi hem de clonar el repositori al nostre disc dur. Utilitzarem la pestanya de control de versions que incorpora el Visual Studio Code per a fer-ho.</p>
+<p><img alt="VSCode Clonar Repositori" src="../img/github/clonar-vscode.png" /></p>
+<p>Ens demanarà el repositori a clonar, ahí peguem la URL del nostre repositori. La podem obtindre del nostre repositori d'una de les dues següents formes, depenent si està completament buit o si ja conté algun arxiu (README.md i LICENSE).</p>
+<p><img alt="Clonar repositori buit" src="../img/github/clonar.png" />
+Clonació de repositori buit</p>
+<p><img alt="Clonar repositori buit" src="../img/github/clonar3.png" />
+Clonació de repositori amb contingut</p>
+<div class="admonition important">
+<p class="admonition-title">Git</p>
+<p>En cas de no tindre git instal·lat, l'opció de clonar el repositori ens apareixerà deshabilitada. </p>
+</div>
+<p>Es pot instal·lar amb <strong>sudo apt install git</strong> en sistemes basats en Debian.  </p>
+<p>En sistemes Windows podeu visitar el següent <a href="https://github.com/git-for-windows/git/releases/">enllaç</a> i baixar l'última versió (Git-2.39.2-64-bit.exe en el moment d'escriure estos apunts).</p>
+<p>Si el repositori s'ha clonat correctament, tindreu una carpeta amb el mateix nom del repositori a l'ubicació on l'heu clonat. Si contenia arxius, estaran dins la carpeta.</p>
+<h2 id="configurem-el-projecte-dmkdocs-per-a-publicar-a-github">Configurem el projecte d'mkdocs per a publicar a github</h2>
+<p>Ara, haurem de crear un projecte d'mkdocs dins la carpeta del repositori o copiar el repositori creat anteriorment.</p>
+<div class="admonition important">
+<p class="admonition-title">Carpeta docs i site</p>
+<p>Per defecte, els arxius markdown en un projecte mkdocs estan a la carpeta <code>docs</code>, mentre que la web es construeix a la carpeta <code>site</code>. Però github sols pot publicar webs que s'allotgen a l'arrel o a la carpeta <code>docs</code>. Per tant, els arxius del <code>build</code> han d'estar a l'arrel o a la carpeta docs.</p>
+<p>Per tant tenim dos possibles solucions:
+1. Executar el <code>mkdocs build</code> i copiar el contingut de la carpeta <code>site</code> a l'arrel del repositori (opció no recomanada).
+2. Modificar la configuració per a que els arxius font en markdown estiguen en una altra carpeta i que el resultat del build estiga a la carpeta docs (opció recomanada).</p>
+<p>La segona solució és la recomanada, ja que ens permetrà tindre en un mateix repositori de github els fonts en markdown i la web construida.</p>
+</div>
+<p>Per a configurar esta segona opció, simplement hem d'indicar a l'arxiu de configuració de mkdocs que els markdown estan en una altra carpeta i que la construcció vaja a la carpeta docs:</p>
+<pre><code class="language-yaml">docs_dir: 'md'
+site_dir: 'docs'
+</code></pre>
+<p>Ara, haureu de situar els arxius en format .md a una carpeta md i deixar la carpeta docs buida.</p>
+<p>En executar la construcció del site web amb <code>mkdocs build</code>, els arxius resultants es posaran a la carpeta docs.</p>
+<h2 id="afegim-arxius-locals-al-repositori-remot-de-github">Afegim arxius locals al repositori remot de github</h2>
+<p>Ara ens falta portar o publicar els canvis que hem fet al repositori local al repositori remot de github.</p>
+<p>Si s'heu fixat a l'explorador del VSCode apareix la lletra U (<em>untracked</em>) a l'esquerra de cada arxiu. Això indica que eixe arxiu no està inclòs al repositori. Altres apareixeran amb la M si han sigut modificats després d'haver-los afegit (<em>modified</em>). </p>
+<p>Anem, en la pestanya de l'equerra, a <em>Source Control</em>, escrivim un missatge indicant quins canvis volem confirmar i li donem al botó de commit. En este cas, nosaltres hem posat "primera versió de la web amb mkdocs".</p>
+<p><img alt="Confirmem els canvis" src="../img/github/commit2.png" /></p>
+<p>Si ens ix una finestra responem que volem confirmar els canvis.</p>
+<p>Per a evitar que ens fallen els commits, anem a configurar el nostre nom i el nostre correu a la configuració de Git, amb les següents dues ordres, introduint les vostres dades corresponents (el correu i el nom d'usuari són els utilitzats durant el registre de github):</p>
+<pre><code class="language-sh">git config --global user.email &quot;El vostre correu&quot;
+git config --global user.name &quot;El vostre nom d'usuari&quot;
+</code></pre>
+<h2 id="pugem-els-canvis-a-github">Pugem els canvis a Github</h2>
+<p>Una vegada confirmats els canvis al repositori, sols ens falta sincronitzar el remot amb els canvis del local.</p>
+<p>Per fer-ho, simplement li donem al botó de sincronitzar, situat on abans estava el de <code>commit</code> a la pestanya del control de versions.</p>
+<p><img alt="Sincronitzem el remot" src="../img/github/push2.png" /></p>
+<p>El VSCode ens avisarà de que l'extensió Github (ja ve integrada sense necessitat d'instal·lar-la) vol iniciar sessió a Github per a guardar els canvis que hem fet en local. Li donem a permetre i s'iniciarà l'intercanvi del <em>token</em> en diversos passos entre el navegador i el VSCode. A partir d'este moment VSCode podrà accedir de forma segura al repositori remot. Si no teniu la sessió iniciada a Github, se us demanarà l'usuari i la contrasenya durant el procés. </p>
+<p><img alt="Registrar-se en Github" src="../img/github/allow.png" /></p>
+<p>Si tot ha anat bé, veureu en l'apartat de comptes d'usuari (icona de baix a l'esquerra) de VSCode que esteu amb la sessió de Github iniciada i el repositori local s'haurà pujat a Github per a la seua publicació.</p>
+<p><img alt="Comptes d'usuari i sessions" src="../img/github/account.png" /></p>
+<p>Podeu comprovar que els arxius que hem creat en local, estan al nostre respositori web de Github. Aneu a <em>Settings</em> i en l'apartat Pages vos indicarà si la pàgina ja està publicada i la seua adreça, que serà <strong>https://nom_organització.github.io</strong>. Comproveu que ja podeu navegar per ella.</p>
+<p>:::caution
+Els arxius es poden modificar tant per web com en local, però recomanem fer-ho sempre al mateix lloc si no domineu bé el programa de control de versions <em>git</em>, ja que poden aparéixer conflictes que s'han de resoldre al modificar en llocs diferents. Si voleu modificar als dos llocs, feu sempre un <em>Pull</em> (portar canvia del remot al local) al repositori local abans de fer les modificacions en local i un <em>Push</em> (penjar canvis del local al remot) a l'acabar.
+:::</p>
+<p>\newpage</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
