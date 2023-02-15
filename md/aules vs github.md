@@ -27,7 +27,7 @@ La publicació en cadascuna d'estes plataformes té els seus avantatges i els se
 - Configurar un nou repositori és més tediós la primera vegada que s'inicia.
 - La web ha de ser pública, de forma que el que publiques serà accessible per qualsevol persona amb accés a internet.
 
-## Una possibilitat
+# Una possibilitat
 
 Una possibilitat és combinar Aules i Github. 
 
