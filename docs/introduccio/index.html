@@ -13,7 +13,7 @@
     
     
       
-        <title>Allotgem la web a Aules - Web estàtica amb mkdocs</title>
+        <title>Introducció i intal·lació - Web estàtica amb mkdocs</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#allotgem-la-nostra-web-al-servidor-daules" class="md-skip">
+        <a href="#web-estatica-amb-mkdocs" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Allotgem la web a Aules
+              Introducció i  intal·lació
             
           </span>
         </div>
@@ -179,11 +179,80 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../introduccio/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introducció i  intal·lació
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Introducció i  intal·lació
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-mkdocs" class="md-nav__link">
+    Què és mkdocs?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-dmkdocs" class="md-nav__link">
+    Instal·lació d'mkdocs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-dun-nou-projecte" class="md-nav__link">
+    Creació d'un nou projecte
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-projecte" class="md-nav__link">
+    Estructura del projecte
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servim-la-web-en-local" class="md-nav__link">
+    Servim la web en local
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -209,21 +278,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../aules/" class="md-nav__link">
         Allotgem la web a Aules
       </a>
-      
     </li>
   
 
@@ -278,6 +337,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-mkdocs" class="md-nav__link">
+    Què és mkdocs?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-dmkdocs" class="md-nav__link">
+    Instal·lació d'mkdocs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-dun-nou-projecte" class="md-nav__link">
+    Creació d'un nou projecte
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-projecte" class="md-nav__link">
+    Estructura del projecte
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servim-la-web-en-local" class="md-nav__link">
+    Servim la web en local
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -291,30 +393,71 @@
                   
 
 
-<h1 id="allotgem-la-nostra-web-al-servidor-daules">Allotgem la nostra web al servidor d'Aules</h1>
-<p>En l'apartat anterior hem vist com construir la nostra web. Ara podem allotjar els nostres arxius per a que es mostres en forma de web a Aules.</p>
-<p>Per allotjar la nostra web a Aules, hauriem de seguir els següents passos:</p>
-<ol>
-<li>Comprimim tot el contingut de la cvarpeta <em>site</em> en un arxiu .zip.
-    <img alt="zip" src="../img/zip.png" /></li>
-<li>Creem un recurs de tipus <em>Fitxer</em> a aules i afegim el zip.
-    <img alt="recurs arxiu" src="../img/crear%20recurs.png" /></li>
-<li>Descomprimim el zip una vegada pujat.
-    <img alt="descomprimir" src="../img/descomprimir.png" /></li>
-<li>Fem clic sobre l'arxiu index.html (o l'arxiu arrel del teu lloc si has canviat el nom a l'arxiu md principal) i el definim com a fitxer principal.
-    <img alt="fitxer principal" src="../img/index.png" /></li>
-<li>
-<p>Per últim definim com volem que es veja:</p>
-<ol>
-<li>Automàtic - Se selecciona de forma automàtica la millor opció per visualitzar el tipus de fitxer. En este cas l'incrustarà.</li>
-<li>Incrustat - El fitxer es mostra dins d'Aules.</li>
-<li>Imposa que es baixe - Se li demana descarregar el fitxer a l'usuari. No utilitzar.</li>
-<li>Obri - Es mostra la web a la finestra actual del navegador.</li>
-<li>Finestra emergent - El fitxer es mostra en una finestra nova del navegador sense menús ni barres d'adreces.</li>
-</ol>
-<p><img alt="aparença" src="../img/aparen%C3%A7a.png" /></p>
-</li>
-</ol>
+<h1 id="web-estatica-amb-mkdocs">Web estàtica amb mkdocs</h1>
+<p>En aquest apartat ens centrarem a construir una pàgina web estàtica utilitzant <strong>mkdocs</strong>. De nou, l'aspecte de la web vindrà determinat per plantilles, encara que en aquest cas els anomenarem temes. Continuem, per tant, amb la idea principal del curs, centrar-nos en el contingut i no tant en l'aspecte, que simplement el configurarem una vegada.</p>
+<p>Una vegada construït el nostre lloc, aprendrem a allotjar-lo a Aules i en un apartat posterior l'allotjarem en un repositori de github, per tal que estiga disponible de forma pública a través d'internet.</p>
+<p>Abans de començar amb el desenvolupament de l'apartat, explicarem breument què és mkdocs.</p>
+<h2 id="que-es-mkdocs">Què és <a href="https://www.mkdocs.org/">mkdocs</a>?</h2>
+<div class="admonition note">
+<p class="admonition-title">mkdocs</p>
+<p>Mkdocs és un generador de llocs web estàtics, pren com a entrada text escrit en markdown i utilitza dissenys predefinits per crear un lloc web estàtic. Podeu modificar l'aspecte del lloc, els enllaços, les dades que es mostren a la pàgina i moltes coses més.</p>
+</div>
+<h2 id="installacio-dmkdocs">Instal·lació d'mkdocs</h2>
+<div class="admonition important">
+<p class="admonition-title">VSCode</p>
+<p>Per a realitzar estos passos, recomanem utilitzar VSCode, ja que ens permet tindre un editor d'arxius i una terminal oberta al mateix programa.</p>
+</div>
+<p>Per a instal·lar mkdocs al nostre ordinador, executarem la següent ordre des de consola (konsole per a Lliurex, PowerShell per a Windows, ...):</p>
+<pre><code class="language-sh">pip install mkdocs
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Pip</p>
+<p>Ja haurieu de tindre pip instal·lat de unitats anteriors, en cas contrari has d'instal·lar python3 i durant la seua instal·lació marcar l'opció d'instal·lar <em>pip</em> i agregar-lo al PATH. Pots descarregar python3 del següent enllaç, <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>.</p>
+</div>
+<p>Una vegada instal·lat mkdocs, haurieu de ser capços d'executar la següent ordre a la consola:</p>
+<pre><code class="language-sh">https://www.python.org/downloads/
+</code></pre>
+<p>Obtenint una resposta semblant a la següent:</p>
+<pre><code class="language-bash">mkdocs, version 1.3.1 from /home/ferran/.local/lib/python3.10/site-packages/mkdocs (Python 3.10)
+</code></pre>
+<h2 id="creacio-dun-nou-projecte">Creació d'un nou projecte</h2>
+<p>Una vegada tenim mkdocs instal·lat, necessitem crear un nou projecte per a construir la nostra web. Per tal de començar un nou projecte, executem:</p>
+<pre><code class="language-sh">mkdocs new &quot;nom del projecte&quot;
+</code></pre>
+<h2 id="estructura-del-projecte">Estructura del projecte</h2>
+<p>Al crear un nou projecte, amb mkdocs, observareu que s'ha creat una estructura com la següent:</p>
+<pre><code>.
+├── docs
+│   └── index.md
+└── mkdocs.yml
+</code></pre>
+<ul>
+<li>L'arxiu <strong>mkdocs.yml</strong> és l'arxiu de configuració de tot el projecte.</li>
+<li>La carpeta <strong>docs</strong> contindrà els nostres documents en format markdown.</li>
+<li>L'arxiu <strong>index.md</strong> és un arxiu de mostra que es mostrarà en format web al accedir a l'arrel del lloc web.</li>
+</ul>
+<p>Si et fixes, per una banda tindrem el contingut en markdown i per altra la configuració de com renderitzar aquest contingut.</p>
+<div class="admonition warning">
+<p class="admonition-title">Carpeta docs</p>
+<p>Encara que per defecte els arxius en format markdown estan a la carpeta docs, anem a canviar esta configuració en apartats posteriors.</p>
+</div>
+<h2 id="servim-la-web-en-local">Servim la web en local</h2>
+<p>Per a servir una web, necessitaríem un servidor web que ens allotjara la nostra web per tal de poder accedir de forma local o remota a través del navegador. mkdocs ens facilita aquesta tasca creant un servidor al nostre ordinador per tal que pugam previsualitzar els canvis abans de servir-ho en un servidor públic (accessible a través d'internet) o construir la nostra web per a publicar-la.</p>
+<p>Per a servir la nostra web, simplement hau d'executar el següent comandament:</p>
+<pre><code class="language-sh">$ mkdocs serve
+INFO     -  Building documentation...
+INFO     -  Cleaning site directory
+INFO     -  Documentation built in 0.06 seconds
+INFO     -  [12:49:32] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO     -  [12:49:32] Serving on http://127.0.0.1:8000/
+</code></pre>
+<p>Ara accedirem a l'URL <code>http://127.0.0.1:8000/</code> i podrem veure la pàgina web per defecte:</p>
+<p><img alt="index_per_defecte" src="../img/index_per_defecte.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Index per defecte</p>
+<p>Obriu al VSCode l'arxiu index.md i fixeu-vos com es correspon amb el que esteu veient a la web local. És a dir, s'està renderitzant el markdown en format web.</p>
+<p>Ara podeu introduir els canvis que desitgeu al vostre contingut, i en guardar, els canvis es reflectiran automàticament al navegador, sempre i quan, l'ordre mkdocs serve continue en execució. <strong>La autorecàrrega es produeix sempre que modifiquem l'arxiu de configuració, el contingut dels arxius markdown o els arxius del tema.</strong></p>
+</div>
 
 
 
@@ -334,30 +477,15 @@
     
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
-        
-        <a href="../configuracio/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuració" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Configuració
-            </div>
-          </div>
-        </a>
-      
       
         
-        <a href="../github/" class="md-footer__link md-footer__link--next" aria-label="Next: Allotgem la web a github" rel="next">
+        <a href="../configuracio/" class="md-footer__link md-footer__link--next" aria-label="Next: Configuració" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Allotgem la web a github
+              Configuració
             </div>
           </div>
           <div class="md-footer__button md-icon">

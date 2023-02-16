@@ -2,11 +2,29 @@
 
 ## Modifiquem l'arxiu *mkdocs.yml*
 
+Tant l'mkdocs com el tema que escolliu tenen moltes possibilitats, però ací veurem la configuració bàsica. Si voleu configurar o personalitzar alguna cosa, haureu de consultar la documentació d'mkdocs o del tema segons el cas.
+
+En este enllaç està la documentació de la configuració d'mkdocs [https://www.mkdocs.org/user-guide/configuration/](https://www.mkdocs.org/user-guide/configuration/).
+
 ### site_name
 
 L'única configuració que és necessària per a servir la web és el *site_name*, que serà una cadena de text que definirà el títol de la pestanya del navegador i apareixerà en el menú de navegació. Diriem que és el nom que defineix la nostra web, per tant serà la primera configuració que modificarem.
 
 Per exemple, en el cas d'esta web, hem posat com a *site_name: Web estàtica amb mkdocs*
+
+### docs_dir
+
+Amb la directiva site_dir, configurem en quina carpeta tenim els arxius font, és a dir el contingut en format markdown a partir del qual es generarà la web.
+
+!!!note "docs_dir"
+    De moment podem deixar sense configurar el docs_dir, però serà necessari en apartats posteriors.
+
+### site_dir
+
+Amb la directiva site_dir, configurem en quina carpeta volem que ens deixe la web llesta per a publicar.
+
+!!!note "site_dir"
+    De moment podem deixar sense configurar el site_dir, però serà necessari en apartats posteriors.
 
 ## Pàgines
 
@@ -58,18 +76,69 @@ Per canviar el tema, editem l'arxiu de configuració i afegim una línia com la 
 ```yaml
 theme: readthedocs
 ```
-En guardar l'arxiu, l'aspecte haurà canviat al del tema *readthedocs*:
+En guardar l'arxiu, l'aspecte haurà canviat:
+
+Tema readthedocs
 
 ![readthedocs](img/readthedocs.png)
 
-!!!info "Temes per defecte"
+Tema mkdocs
+
+![mkdocs](img/tema_mkdocs.png)
+
+Tema material
+
+![material](img/tema_material.png)
+
+
+!!!note "Temes per defecte"
     Mkdocs sols incorpora dos temes, mkdocs i readthedocs, però hi ha temes desenvolupats per tercers que podeu utilitzar. Simplement s'hauria de mirar a la documentació corresponent com posar-los en funcionament. Sol ser un procés molt senzill. 
 
     Al següent enllaç tens informació sobre altres temes per a mkdocs, [https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes).
 
+!!!note "Material for mkdocs"
+    Un tema molt complet, amigable i versàtil és material for mkdocs. Consulteu la documentació en cas de voler-lo utilitzar. 
+    
+    Per instal·lar-lo executeu `pip install mkdocs-material`.
+
+    Per utilitzar-lo `theme: material`.
+
+    [https://squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/)
+
 ## Canviant l'icona de la nostra web
 
 Per defecte, mkdocs utilitza la seua propia icona. Si volem utilitzar una icona diferent, crea un directori img a la carpeta docs i guarda una icona amb el nom favicon.ico, mkdocs el detectarà i el canviarà automàticament.
+
+## Afegint *admonitions* (caixes de l'estil awesomebox)
+
+Per poder fer ús de les caixes per resaltar contingut, hem d'afegir el plugin admonition a l'arxiu de configuració:
+
+```yaml
+markdown_extensions:
+  - admonition
+```
+
+A diferència d'awesomebox, les caixes a mkdocs es defineixen amb tres tancaments d'exclamació, i el contingut de dins la caixa va tabulat. Per exemple:
+
+```markdown
+!!!note "Anotació"
+    Esta part si que la podeu provar a casa.
+
+!!!warning "Compte!"
+    Aneu amb compte al realitzar esta part.
+
+!!!danger "Perill!!"
+    No proveu açò a casa.
+```
+
+!!!note "Anotació"
+    Esta part si que la podeu provar a casa.
+
+!!!warning "Compte!"
+    Aneu amb compte al realitzar esta part.
+
+!!!danger "Perill!!"
+    No proveu açò a casa.
 
 ## Construim el lloc web
 
