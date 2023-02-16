@@ -14,3 +14,7 @@ markdown_extensions:
   - attr_list
 
 theme: material
+
+plugins:
+  - search
+  - pdf-export
