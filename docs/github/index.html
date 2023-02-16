@@ -448,6 +448,11 @@ Clonació de repositori amb contingut</p>
 <p>Si el repositori s'ha clonat correctament, tindreu una carpeta amb el mateix nom del repositori a l'ubicació on l'heu clonat. Si contenia arxius, estaran dins la carpeta.</p>
 <h2 id="configurem-el-projecte-dmkdocs-per-a-publicar-a-github">Configurem el projecte d'mkdocs per a publicar a github</h2>
 <p>Ara, haurem de crear un projecte d'mkdocs dins la carpeta del repositori o copiar el repositori creat anteriorment.</p>
+<div class="admonition warning">
+<p class="admonition-title">mkdocs new</p>
+<p>En l'apartat de crear un nou projecte amb mkdocs, es va explicar que l'ordre és <code>mkdocs new "nom del projecte"</code>. </p>
+<p>Però si ja tens clonada la carpeta de github, <strong>hauràs d'executar <code>mkdocs new "nom carpeta github"</code></strong> per a que no et cree una nova carpeta dins el projecte, sinó utilitzar la mateixa que github.</p>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Carpeta docs i site</p>
 <p>Per defecte, els arxius markdown en un projecte mkdocs estan a la carpeta <code>docs</code>, mentre que la web es construeix a la carpeta <code>site</code>. Però github sols pot publicar webs que s'allotgen a l'arrel o a la carpeta <code>docs</code>. Per tant, els arxius del <code>build</code> han d'estar a l'arrel o a la carpeta docs.</p>
