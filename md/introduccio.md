@@ -29,7 +29,7 @@ pip install mkdocs
 Una vegada instal·lat mkdocs, haurieu de ser capços d'executar la següent ordre a la consola:
 
 ```sh
-https://www.python.org/downloads/
+mkdocs --version
 ```
 
 Obtenint una resposta semblant a la següent:
