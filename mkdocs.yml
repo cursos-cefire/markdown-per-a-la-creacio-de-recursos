@@ -1,6 +1,6 @@
 site_name: Web estàtica amb mkdocs
-docs_dir: 'md'
-site_dir: 'docs'
+docs_dir: "md"
+site_dir: "docs"
 dev_addr: localhost:4000
 nav:
   - 1. Introducció: index.md
@@ -16,6 +16,7 @@ markdown_extensions:
 
 theme: material
 
-plugins:
-  - search
-  - pdf-export
+
+# plugins:
+#   - search
+#   - pdf-export
