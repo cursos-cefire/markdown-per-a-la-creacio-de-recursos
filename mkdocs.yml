@@ -1,13 +1,14 @@
 site_name: Web estàtica amb mkdocs
-docs_dir: "md"
-site_dir: "docs"
+docs_dir: 'md'
+site_dir: 'docs'
 dev_addr: localhost:4000
 nav:
-  - Introducció i  intal·lació: introduccio.md
-  - Configuració: configuracio.md
-  - Allotgem la web a Aules: aules.md
-  - Allotgem la web a github: github.md
-  - "Docència: Aules o github?": aules vs github.md
+  - 1. Introducció: index.md
+  - 2. Instal·lació: instal·lacio.md
+  - 3. Configuració: configuracio.md
+  - 4. Allotgem la web a Aules: aules.md
+  - 5. Allotgem la web a github: github.md
+  - "6. Docència: Aules o github?": aules vs github.md
 
 markdown_extensions:
   - admonition

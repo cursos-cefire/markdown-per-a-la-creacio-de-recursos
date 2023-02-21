@@ -1,18 +1,4 @@
-
-# Web estàtica amb mkdocs
-
-En aquest apartat ens centrarem a construir una pàgina web estàtica utilitzant **mkdocs**. De nou, l'aspecte de la web vindrà determinat per plantilles, encara que en aquest cas els anomenarem temes. Continuem, per tant, amb la idea principal del curs, centrar-nos en el contingut i no tant en l'aspecte, que simplement el configurarem una vegada.
-
-Una vegada construït el nostre lloc, aprendrem a allotjar-lo a Aules i en un apartat posterior l'allotjarem en un repositori de github, per tal que estiga disponible de forma pública a través d'internet.
-
-Abans de començar amb el desenvolupament de l'apartat, explicarem breument què és mkdocs.
-
-## Què és [mkdocs](https://www.mkdocs.org/)?
-
-!!!note "mkdocs"
-    Mkdocs és un generador de llocs web estàtics, pren com a entrada text escrit en markdown i utilitza dissenys predefinits per crear un lloc web estàtic. Podeu modificar l'aspecte del lloc, els enllaços, les dades que es mostren a la pàgina i moltes coses més.
-
-## Instal·lació d'mkdocs
+## 1. Instal·lació d'mkdocs
 
 !!!important "VSCode"
     Per a realitzar estos passos, recomanem utilitzar VSCode, ja que ens permet tindre un editor d'arxius i una terminal oberta al mateix programa.
@@ -29,7 +15,7 @@ pip install mkdocs
 Una vegada instal·lat mkdocs, haurieu de ser capços d'executar la següent ordre a la consola:
 
 ```sh
-mkdocs --version
+https://www.python.org/downloads/
 ```
 
 Obtenint una resposta semblant a la següent:
@@ -38,7 +24,7 @@ Obtenint una resposta semblant a la següent:
 mkdocs, version 1.3.1 from /home/ferran/.local/lib/python3.10/site-packages/mkdocs (Python 3.10)
 ```
 
-## Creació d'un nou projecte
+## 2. Creació d'un nou projecte
 
 Una vegada tenim mkdocs instal·lat, necessitem crear un nou projecte per a construir la nostra web. Per tal de començar un nou projecte, executem:
 
@@ -46,7 +32,7 @@ Una vegada tenim mkdocs instal·lat, necessitem crear un nou projecte per a cons
 mkdocs new "nom del projecte"
 ```
 
-## Estructura del projecte
+## 3. Estructura del projecte
 
 Al crear un nou projecte, amb mkdocs, observareu que s'ha creat una estructura com la següent:
 
@@ -66,7 +52,7 @@ Si et fixes, per una banda tindrem el contingut en markdown i per altra la confi
 !!!warning "Carpeta docs"
     Encara que per defecte els arxius en format markdown estan a la carpeta docs, anem a canviar esta configuració en apartats posteriors.
 
-## Servim la web en local
+## 4. Servim la web en local
 
 Per a servir una web, necessitaríem un servidor web que ens allotjara la nostra web per tal de poder accedir de forma local o remota a través del navegador. mkdocs ens facilita aquesta tasca creant un servidor al nostre ordinador per tal que pugam previsualitzar els canvis abans de servir-ho en un servidor públic (accessible a través d'internet) o construir la nostra web per a publicar-la.
 
