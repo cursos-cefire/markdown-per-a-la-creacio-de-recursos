@@ -16,6 +16,9 @@ markdown_extensions:
 
 theme: material
 
+extra_css:
+  - css/extra.css
+
 
 # plugins:
 #   - search
