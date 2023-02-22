@@ -105,6 +105,29 @@ Tema material
 
     [https://squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/)
 
+### 1.4.1. Modifiquem el tema
+
+Per modificar el tema, creem un arxiu amb les regles css que vulem modificar i el situem a la carpeta on tenim els arxius font (*docs_dir*). A l'mkdocs el referenciem amb l'opció "extra_css".
+
+Per exemple:
+
+![extra css](img/extra_css.png)
+
+Arxiu mkdocs.yml (no està complet):
+
+```yaml
+docs_dir: "md"
+site_dir: "docs"
+
+...
+extra_css:
+  - css/extra.css
+```
+
+Ara al fer un *build* observarem que els arxius de regles css es copien la carpeta a la carpeta del *site_dir* i també que s'apliquen els canvis en servir en local el lloc.
+
+![CSS](img/css.png)
+
 ## 1.5. Canviant l'icona de la nostra web
 
 Per defecte, mkdocs utilitza la seua propia icona. Si volem utilitzar una icona diferent, crea un directori img a la carpeta docs i guarda una icona amb el nom favicon.ico, mkdocs el detectarà i el canviarà automàticament.
