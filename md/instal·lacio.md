@@ -1,4 +1,4 @@
-## 1. Instal·lació d'mkdocs
+### 1. Instal·lació d'mkdocs
 
 !!!important "VSCode"
     Per a realitzar estos passos, recomanem utilitzar VSCode, ja que ens permet tindre un editor d'arxius i una terminal oberta al mateix programa.
@@ -24,7 +24,7 @@ Obtenint una resposta semblant a la següent:
 mkdocs, version 1.3.1 from /home/ferran/.local/lib/python3.10/site-packages/mkdocs (Python 3.10)
 ```
 
-## 2. Creació d'un nou projecte
+### 2. Creació d'un nou projecte
 
 Una vegada tenim mkdocs instal·lat, necessitem crear un nou projecte per a construir la nostra web. Per tal de començar un nou projecte, executem:
 
@@ -32,7 +32,7 @@ Una vegada tenim mkdocs instal·lat, necessitem crear un nou projecte per a cons
 mkdocs new "nom del projecte"
 ```
 
-## 3. Estructura del projecte
+### 3. Estructura del projecte
 
 Al crear un nou projecte, amb mkdocs, observareu que s'ha creat una estructura com la següent:
 
@@ -52,11 +52,11 @@ Si et fixes, per una banda tindrem el contingut en markdown i per altra la confi
 !!!warning "Carpeta docs"
     Encara que per defecte els arxius en format markdown estan a la carpeta docs, anem a canviar esta configuració en apartats posteriors.
 
-## 4. Servim la web en local
+### 4. Servim la web en local
 
 Per a servir una web, necessitaríem un servidor web que ens allotjara la nostra web per tal de poder accedir de forma local o remota a través del navegador. mkdocs ens facilita aquesta tasca creant un servidor al nostre ordinador per tal que pugam previsualitzar els canvis abans de servir-ho en un servidor públic (accessible a través d'internet) o construir la nostra web per a publicar-la.
 
-Per a servir la nostra web, simplement hau d'executar el següent comandament:
+Per a servir la nostra web, simplement haurieu d'executar el següent comandament dins la carpeta del projecte (utilitzeu l'ordre cd per a navegar a ella):
 
 ```sh
 $ mkdocs serve

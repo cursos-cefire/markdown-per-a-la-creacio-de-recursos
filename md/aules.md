@@ -1,4 +1,4 @@
-# 1. Allotgem la nostra web al servidor d'Aules
+## 1. Allotgem la nostra web al servidor d'Aules
 
 En l'apartat anterior hem vist com construir la nostra web. Ara podem allotjar els nostres arxius per a que es mostres en forma de web a Aules.
 

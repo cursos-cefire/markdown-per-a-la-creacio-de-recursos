@@ -1,6 +1,6 @@
-# 1. Allotgem la nostra web al servidor de github
+## 1. Allotgem la nostra web al servidor de github
 
-## 1.1. Què és un sistema de control de versions?
+### 1.1. Què és un sistema de control de versions?
 
 Per a entendre què és Github, necessitem conéixer dos conceptes relacionats:
 
@@ -33,7 +33,7 @@ VSCode també incorpora control de versions als nostres arxius, de forma que pod
 
 ![timeline](img/github/timeline.png)
 
-### 1.1.1. Git
+#### 1.1.1. Git
 
 Git és un sistema de control de versions de codi obert creat per Linus Torvalds, el creador del primer kernel de Linux, l'any 2005.
 
@@ -41,7 +41,7 @@ Es diu que Git és un sistema de control de versions distribuït, ja que totes l
 
 Segons una enquesta de desenvolupadors de Stack Overflow, més del 87% dels desenvolupadors utilitzen Git.
 
-## 1.2. Aleshores, què és [Github](https://github.com/)?
+### 1.2. Aleshores, què és [Github](https://github.com/)?
 
 GitHub és una plataforma que ofereix un servei gratuït d'allotjament de repositoris Git basat en el núvol. En altres paraules, és una forma d'utilitzar repositoris Git a través de la web.
 
@@ -57,9 +57,9 @@ Els repositoris que creem a Github poden ser públics i estar disponibles per a 
     En Gener del 2020, GitHub tenia més de 40 milions d'usuaris, més de 190 milions de repositoris, 28 milions dels quals són públics.
 
 
-# 2. Configuració de Github
+## 2. Configuració de Github
 
-## 2.1. Registre d'usuari
+### 2.1. Registre d'usuari
 
 En este primer punt, crearem un repositori github per a allotjar la nostra web. 
 
@@ -71,7 +71,7 @@ El primer pas serà registrar-nos a github en cas que no ho estigam ja accedint 
 
 ![Registre de github](img/github/github-register.png)
 
-## 2.2. Creació d'un repositori
+### 2.2. Creació d'un repositori
 
 Un repositori de github és un projecte allotjat al núvol sobre el qual volem portar un control de versions a través de la web.
 
@@ -86,7 +86,7 @@ Assigneu un nom que identifique el repositori i el feu públic. Si voleu, també
 
 ![new repository](img/github/github-new-repository3.png)
 
-## 2.3. Clonació del repositori
+### 2.3. Clonació del repositori
 
 El que anem a fer ara és portar el repositori de Github al nostre ordinador per a poder agregar contingut, que una vegada provat, tornarem a pujar a Github per a que es publique la nostra web, igual que hem fet a Aules. 
 
@@ -112,7 +112,7 @@ En sistemes Windows podeu visitar el següent [enllaç](https://github.com/git-f
 
 Si el repositori s'ha clonat correctament, tindreu una carpeta amb el mateix nom del repositori a l'ubicació on l'heu clonat. Si contenia arxius, estaran dins la carpeta.
 
-## 2.4. Configurem el projecte d'mkdocs per a publicar a github
+### 2.4. Configurem el projecte d'mkdocs per a publicar a github
 
 Ara, haurem de crear un projecte d'mkdocs dins la carpeta del repositori o copiar el repositori creat anteriorment.
 
@@ -141,7 +141,7 @@ Ara, haureu de situar els arxius en format .md a una carpeta md i deixar la carp
 
 En executar la construcció del site web amb `mkdocs build`, els arxius resultants es posaran a la carpeta docs.
 
-## 2.5. Afegim arxius locals al repositori remot de github
+### 2.5. Afegim arxius locals al repositori remot de github
 
 Ara ens falta portar o publicar els canvis que hem fet al repositori local al repositori remot de github.
 
@@ -161,7 +161,7 @@ git config --global user.email "El vostre correu"
 git config --global user.name "El vostre nom d'usuari"
 ```
 
-## 2.6. Pugem els canvis a Github
+### 2.6. Pugem els canvis a Github
 
 Una vegada confirmats els canvis al repositori, sols ens falta sincronitzar el remot amb els canvis del local.
 
@@ -182,7 +182,7 @@ Podeu comprovar que els arxius que hem creat en local, estan al nostre resposito
 
 ![remot sincronitzat](img/github/sincronitzat.png)
 
-# 3. Configurem github per a que ens publique la web
+## 3. Configurem github per a que ens publique la web
 
 Per últim, sols ens falta configurar github per a que ens publique el nostre *build*.
 
