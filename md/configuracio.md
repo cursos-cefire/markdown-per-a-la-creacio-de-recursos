@@ -58,6 +58,27 @@ nav:
 
 ![submenus](img/submenus.png)
 
+#### 1.2.1. Seccions dins les pàgines
+
+Per defecte, una pàgina web sols hauria de contenir un encapçalament de primer ordre, és a dir una etiquet h1 en html o un # en markdown. Per tant, recomanem que les seccions dins una pàgina es comencen a numerar amb ##:
+
+```markdown
+## 1
+
+### 1.1
+
+#### 1.1.1
+
+#### 1.1.2
+
+### 1.2
+
+## 2
+
+### 2.1
+
+```
+
 ### 1.3. Buscador
 
 Observeu que també disposem d'un buscador al menú de navegació que ens permetrà buscar a través del contingut de la web. 
@@ -78,18 +99,20 @@ theme: readthedocs
 ```
 En guardar l'arxiu, l'aspecte haurà canviat:
 
-Tema readthedocs
+<figure markdown>
+  ![readthedocs](img/readthedocs.png)
+  <figcaption>Tema readthedocs</figcaption>
+</figure>
 
-![readthedocs](img/readthedocs.png)
+<figure markdown>
+  ![mkdocs](img/tema_mkdocs.png)
+  <figcaption>Tema mkdocs</figcaption>
+</figure>
 
-Tema mkdocs
-
-![mkdocs](img/tema_mkdocs.png)
-
-Tema material
-
-![material](img/tema_material.png)
-
+<figure markdown>
+  ![material](img/tema_material.png)
+  <figcaption>Tema material</figcaption>
+</figure>
 
 !!!note "Temes per defecte"
     Mkdocs sols incorpora dos temes, mkdocs i readthedocs, però hi ha temes desenvolupats per tercers que podeu utilitzar. Simplement s'hauria de mirar a la documentació corresponent com posar-los en funcionament. Sol ser un procés molt senzill. 
