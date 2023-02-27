@@ -1,7 +1,6 @@
 site_name: Web estàtica amb mkdocs
 docs_dir: "md"
 site_dir: "docs"
-dev_addr: localhost:4000
 nav:
   - 1. Introducció: index.md
   - 2. Instal·lació: instal·lacio.md
