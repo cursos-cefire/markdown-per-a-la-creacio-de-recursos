@@ -14,10 +14,16 @@ markdown_extensions:
   - attr_list
   - md_in_html
 
-theme: material
+theme:
+  name: 'material'
+  logo: 'img/logoMarkdown.png'
+  favicon: 'img/logoMarkdown.png'
+  palette:
+    primary: 'white'
 
-extra_css:
-  - css/extra.css
+#extra_css:
+#  - css/extra.css
+
 
 
 # plugins:

@@ -21,7 +21,6 @@ La publicació en cadascuna d'estes plataformes té els seus avantatges i els se
 - Fer modificacions és molt més còmode, simplement fes el build i sincronitza amb el remot.
 - Els alumnes o les persones interessades tenen la informació accessible a través de la web, sense necessitat d'enregistrar-se i autenticar-se a Aules.
 
-
 #### 1.2.2. Inconvenients
 
 - Configurar un nou repositori és més tediós la primera vegada que s'inicia.
@@ -29,7 +28,7 @@ La publicació en cadascuna d'estes plataformes té els seus avantatges i els se
 
 ## 2. Una possibilitat
 
-Una possibilitat és combinar Aules i Github. 
+Una possibilitat és combinar Aules i Github.
 
 A Aules pengem una etiqueta amb l'enllaç a la nostra web per a tot el curs i enviem un avís als nostres alumnes cada vegada que publiquem un nou tema o nou material.
 

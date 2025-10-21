@@ -4,7 +4,7 @@ En l'apartat anterior hem vist com construir la nostra web. Ara podem allotjar e
 
 Per allotjar la nostra web a Aules, hauriem de seguir els següents passos:
 
-1. Comprimim tot el contingut de la cvarpeta *site* en un arxiu .zip.
+1. Comprimim tot el contingut de la carpeta *site* en un arxiu .zip.
     ![zip](img/zip.png)
 2. Creem un recurs de tipus *Fitxer* a aules i afegim el zip.
     ![recurs arxiu](img/crear%20recurs.png)

@@ -2,7 +2,7 @@
 
 ### 1.1. Modifiquem l'arxiu *mkdocs.yml*
 
-Tant l'mkdocs com el tema que escolliu tenen moltes possibilitats, però ací veurem la configuració bàsica. Si voleu configurar o personalitzar alguna cosa, haureu de consultar la documentació d'mkdocs o del tema segons el cas.
+Tant l'**mkdocs** com el tema que escolliu tenen moltes possibilitats, però en esta unitat ens centrarem en la configuració bàsica. En la propera unitat personalitzarem tant el tema com algunes configuracions.
 
 En este enllaç està la documentació de la configuració d'mkdocs [https://www.mkdocs.org/user-guide/configuration/](https://www.mkdocs.org/user-guide/configuration/).
 
@@ -30,16 +30,17 @@ Amb la directiva site_dir, configurem en quina carpeta volem que ens deixe la we
 
 Anem a veure en este apartat com configurar noves pàgines a la nostra web. Seran accessibles a través del menú de navegació.
 
-El primer pas serà incorporar un nou arxiu .md amb contingut, per exemple, about.md a la carpeta docs.
+El primer pas serà incorporar un nou arxiu .md amb contingut, per exemple, **about.md** a la carpeta **docs**.
 
-Després modificarem l'arxiu de configuració per afegir al menú de navegació les nostres pàgines de la forma següent:
+Després modificarem l'arxiu de configuració **mkdocs.yml** per afegir al menú de navegació les nostres pàgines de la forma següent:
 
 ```yaml
 nav:
     - Home: index.md
     - About: about.md
 ```
-Ara la pàgina tindrà l'aspecte següent:
+
+Li podriem donar un aspecte semblant al següent incorporant un encapçalament de nivell 2 (##) i una imatge:
 
 ![pagines](img/pagines.png)
 
@@ -83,7 +84,7 @@ Per defecte, una pàgina web sols hauria de contenir un encapçalament de primer
 
 Observeu que també disposem d'un buscador al menú de navegació que ens permetrà buscar a través del contingut de la web. 
 
-!!!note "Buscador" 
+!!!tip "Buscador" 
     Açò pot ser molt útil per als nostres alumnes a l'hora d'utilitzar els nostres recursos com a documentació de referència. Els permetrà localitzar ràpidament el contingut que busuqen.
 
     Observeu que ens trobarà totes les ocurrències del contingut buscat.
@@ -114,21 +115,21 @@ En guardar l'arxiu, l'aspecte haurà canviat:
   <figcaption>Tema material</figcaption>
 </figure>
 
-!!!note "Temes per defecte"
+!!!info "Temes per defecte"
     Mkdocs sols incorpora dos temes, mkdocs i readthedocs, però hi ha temes desenvolupats per tercers que podeu utilitzar. Simplement s'hauria de mirar a la documentació corresponent com posar-los en funcionament. Sol ser un procés molt senzill. 
 
     Al següent enllaç tens informació sobre altres temes per a mkdocs, [https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes).
 
-!!!note "Material for mkdocs"
-    Un tema molt complet, amigable i versàtil és material for mkdocs. Consulteu la documentació en cas de voler-lo utilitzar. 
+<!-- !!!info "Material for mkdocs"
+    Un tema molt complet, amigable i versàtil és material for mkdocs. En la següent unitat farem ús d'ell i aprofundirem en la seua configuració. 
     
     Per instal·lar-lo executeu `pip install mkdocs-material`.
 
     Per utilitzar-lo `theme: material`.
 
-    [https://squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/)
+    [https://squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/) -->
 
-#### 1.4.1. Modifiquem el tema
+#### 1.4.1. Modifiquem el tema (avançat)
 
 Per modificar el tema, creem un arxiu amb les regles css que vulem modificar i el situem a la carpeta on tenim els arxius font (*docs_dir*). A l'mkdocs el referenciem amb l'opció "extra_css".
 
@@ -153,9 +154,9 @@ Ara al fer un *build* observarem que els arxius de regles css es copien la carpe
 
 ### 1.5. Canviant l'icona de la nostra web
 
-Per defecte, mkdocs utilitza la seua propia icona. Si volem utilitzar una icona diferent, crea un directori img a la carpeta docs i guarda una icona amb el nom favicon.ico, mkdocs el detectarà i el canviarà automàticament.
+Per defecte, mkdocs utilitza la seua propia icona. Si volem utilitzar una icona diferent, crea un directori img a la carpeta docs i guarda una icona amb el nom **favicon.ico**, mkdocs el detectarà i el canviarà automàticament.
 
-### 1.6. Afegint *admonitions* (caixes de l'estil awesomebox)
+<!-- ### 1.6. Afegint *admonitions* (caixes per a captar l'atenció)
 
 Per poder fer ús de les caixes per resaltar contingut, hem d'afegir el plugin admonition a l'arxiu de configuració:
 
@@ -184,9 +185,9 @@ A diferència d'awesomebox, les caixes a mkdocs es defineixen amb tres tancament
     Aneu amb compte al realitzar esta part.
 
 !!!danger "Perill!!"
-    No proveu açò a casa.
+    No proveu açò a casa. -->
 
-### 1.7. Construim el lloc web
+### 1.6. Construim el lloc web
 
 Finalment, després d'haver comprovat al nostre ordinador que el resultat és l'esperat, construïm el lloc web, és a dir, el deixem enllestit per poder-lo penjar a un servidor amb l'ordre:
 
